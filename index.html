@@ -8,13 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        .hero {
-            background-image: url(./assets/hero-bg.png);
-            background-size: cover;
-            background-position: center;
-
-        }
-
         .animate-colorpulse {
             animation: color-pulse 2s infinite;
         }
@@ -67,20 +60,21 @@
     </nav>
     <main>
         <!-- hero section -->
-        <div class=" hero h-screen ">
+        <div class=" hero min-h-screen relative   md:py-20 bg-no-repeat md:bg-center md:bg-cover "
+            style="background-image: url('./assets/hero-bg.png'); ">
 
-            <div class="absolute top-60 left-80 md:top-55 md:left-208 z-10">
+            <div class="absolute top-30 left-65 md:top-35 md:left-208 z-10">
                 <span class="absolute -inset-2 inline-flex animate-ping rounded-full bg-green-400 opacity-60"></span>
                 <button
                     class="relative  px-2  bg-green-400 animate-pulse text-black font-medium rounded-3xl">NEW</button>
             </div>
 
-            <img class="absolute   w-70 top-50 left-25 md:top-50 md:left-145 md:w-90" src="./assets/hero-circle.png"
+            <img class="absolute   w-60 top-20 left-18 md:top-28 md:left-145 md:w-90" src="./assets/hero-circle.png"
                 alt="">
-            <img class="absolute top-70 left-50 md:top-73 md:left-175 w-20 md:w-30" src="./assets/microphone.png"
+            <img class="absolute top-36 left-38 md:top-53 md:left-175 w-20 md:w-30" src="./assets/microphone.png"
                 alt="">
 
-            <div class="hero-cont text-center relative top-138 ">
+            <div class="hero-cont text-center relative top-90 md:top-108 ">
                 <h1 class="text-4xl text-white font-bold ">TechWave</h1>
                 <p class="text-gray-300 mx-auto text-sm md:text-lg mt-5">Your daily dose of tech insights, productivity
                     hacks,
@@ -89,13 +83,13 @@
                 </p>
                 <div class="hero-btn flex  flex-col sm:flex-row justify-center items-center gap-3 mt-5">
                     <button
-                        class="w-full sm:w-auto text-white bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg">
+                        class="w-auto sm:w-auto m-4 text-white bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg">
                         <i class="fa-brands fa-spotify text-xl  animate-colorpulse"></i>
                         Listen on Spotify
                     </button>
 
                     <button
-                        class="w-full sm:w-auto text-green-400 border-2 border-green-500 rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:bg-green-500 hover:text-white transition-all shadow-lg">
+                        class="w-auto sm:w-auto text-green-400 border-2 border-green-500 rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:bg-green-500 hover:text-white transition-all shadow-lg hover:animate-bounce">
                         <i class="fa-solid fa-envelope"></i>
                         Subscribe
 
@@ -316,7 +310,7 @@
     <footer class="relative  py-20 bg-no-repeat bg-center bg-cover border-t border-white/5"
         style="background-image: url('./assets/footer-bg.png');">
         <div class="max-w-7xl mx-auto text-center px-6">
-            <h1 class="text-white text-6xl font-bold ml-20">Tech<span
+            <h1 class="text-white  text-center text-3xl md:text-6xl font-bold ">Tech<span
                     class="bg-gradient-to-b from-yellow-500  via-pink-500 via-red-400 to-blue-700 bg-clip-text text-transparent ">Wave</span>
             </h1>
 
