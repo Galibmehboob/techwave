@@ -37,55 +37,74 @@
 </head>
 
 <body>
+
+
     <!-- Navbar section -->
-    <nav>
-        <div class="bg-[#1A0B2E] flex justify-between p-5 border-b-2 border-gray-700 ">
-            <h1 class="text-white text-4xl font-bold ml-20">Tech<span
-                    class="bg-gradient-to-b from-yellow-500  via-pink-500 via-red-400 to-blue-700 bg-clip-text text-transparent ">Wave</span>
+    <nav class=" sticky top-0 z-11  ">
+        <div class="bg-[#1A0B2E] flex  justify-between p-5 border-b-2 border-gray-700  ">
+            <h1 class="text-white text-3xl md:text-4xl font-bold md:ml-20">
+                Tech<span
+                    class="bg-gradient-to-b from-yellow-500 via-pink-500 via-red-400 to-blue-700 bg-clip-text text-transparent">Wave</span>
             </h1>
-            <ul class="flex text-white gap-9 items-center">
-                <li><a href="">About</a></li>
-                <li><a href="">Episodes</a></li>
-                <li><a href="">Host</a></li>
+            <div class="flex items-center md:hidden">
+                <label for="menu-toggle" class="cursor-pointer">
+                    <img src="./assets/hamburger-menu.png" alt="Menu" class="w-5 h-5">
+                </label>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <ul
+                class="hidden peer-checked:block md:flex absolute md:static top-full left-0 w-full md:w-auto bg-[#1A0B2E] md:bg-transparent flex-col md:flex-row text-white gap-6 md:gap-9 items-center p-6 md:p-0 border-b md:border-0 border-gray-700 z-40">
+                <li><a href="" class="hover:text-pink-500 transition-colors">About</a></li>
+                <li><a href="" class="hover:text-pink-500 transition-colors">Episodes</a></li>
+                <li><a href="" class="hover:text-pink-500 transition-colors">Host</a></li>
             </ul>
-            <button class="text-white bg-gradient-to-r from-yellow-300 via-pink-500 to-blue-500  rounded-3xl px-5 py-2 mr-20 
-               transition-transform duration-300 ease-in-out hover:scale-130">Subscribe<i
-                    class="fa-solid fa-arrow-right pl-2 relative top-0.50"></i></button>
-        </div>
+            <button
+                class="hidden md:block text-white bg-gradient-to-r from-yellow-300 via-pink-500 to-blue-500 rounded-3xl px-6 py-2 md:mr-20 transition-transform duration-300 hover:scale-110">
+                Subscribe <i class="fa-solid fa-arrow-right pl-2"></i>
+            </button>
     </nav>
     <main>
         <!-- hero section -->
         <div class=" hero h-screen ">
 
-            <div class="absolute top-55 left-208 z-10">
+            <div class="absolute top-60 left-80 md:top-55 md:left-208 z-10">
                 <span class="absolute -inset-2 inline-flex animate-ping rounded-full bg-green-400 opacity-60"></span>
                 <button
                     class="relative  px-2  bg-green-400 animate-pulse text-black font-medium rounded-3xl">NEW</button>
             </div>
 
-            <img class="absolute top-50 left-145 w-90" src="./assets/hero-circle.png" alt="">
-            <img class="absolute top-73 left-175 w-30" src="./assets/microphone.png" alt="">
+            <img class="absolute   w-70 top-50 left-25 md:top-50 md:left-145 md:w-90" src="./assets/hero-circle.png"
+                alt="">
+            <img class="absolute top-70 left-50 md:top-73 md:left-175 w-20 md:w-30" src="./assets/microphone.png"
+                alt="">
 
             <div class="hero-cont text-center relative top-138 ">
                 <h1 class="text-4xl text-white font-bold ">TechWave</h1>
-                <p class="text-gray-300 mt-5">Your daily dose of tech insights, productivity hacks, and personal growth
+                <p class="text-gray-300 mx-auto text-sm md:text-lg mt-5">Your daily dose of tech insights, productivity
+                    hacks,
+                    and
+                    personal growth
                 </p>
-                <div class="hero-btn flex justify-center gap-3 mt-5">
+                <div class="hero-btn flex  flex-col sm:flex-row justify-center items-center gap-3 mt-5">
                     <button
-                        class="text-white bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 rounded-3xl px-5 py-2  "><i
-                            class="fa-brands fa-spotify mr-2 animate-colorpulse "></i>Listen
-                        on
-                        Spotify</button>
+                        class="w-full sm:w-auto text-white bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg">
+                        <i class="fa-brands fa-spotify text-xl  animate-colorpulse"></i>
+                        Listen on Spotify
+                    </button>
 
-                    <div class="relative">
-
-                        <button class="text-green-500 border-2 rounded-3xl px-5 py-2  animate-bounce"><i
-                                class="fa-solid fa-envelope mr-3"></i>Subscribe</button>
-                    </div>
+                    <button
+                        class="w-full sm:w-auto text-green-400 border-2 border-green-500 rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:bg-green-500 hover:text-white transition-all shadow-lg">
+                        <i class="fa-solid fa-envelope"></i>
+                        Subscribe
 
                 </div>
+
             </div>
         </div>
+
+
         <!-- podcast section -->
         <section class="podcast w-auto bg-[#1A0B2E]">
             <div class="rating-1 w-200 text-center mx-auto text-white  mb-16">
@@ -285,7 +304,7 @@
 
         </div>
     </main>
-
+    <!-- footer section -->
     <footer class="relative  py-20 bg-no-repeat bg-center bg-cover border-t border-white/5"
         style="background-image: url('./assets/footer-bg.png');">
         <div class="max-w-7xl mx-auto text-center px-6">
